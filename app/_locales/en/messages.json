@@ -1,0 +1,18 @@
+{
+  "appName": {
+    "message": "Polygraph",
+    "description": "The name of the application"
+  },
+  "appShortName": {
+    "message": "Polygraph",
+    "description": "The short_name (maximum of 12 characters recommended) is a short version of the app's name."
+  },
+  "appDescription": {
+    "message": "Polygraph analyzes webpages and warns you about fake news.",
+    "description": "The description of the application"
+  },
+  "browserActionTitle": {
+    "message": "Polygraph",
+    "description": "The title of the browser action button"
+  }
+}
