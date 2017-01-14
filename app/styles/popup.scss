@@ -1,3 +1,9 @@
+@import "bourbon/bourbon";
+@import "base/base";
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Raleway');
+
+
 * {
   margin: 0;
   padding: 0;
@@ -7,13 +13,25 @@
 }
 
 .popup-content {
-  margin: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 200px;
 }
 
-ul {
-  padding: 15px;
-  margin: auto;
+.title {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.list {
+  font-family: 'Raleway', sans-serif;
+
+  li {
+    border-top: 1px;
+    border-style: solid;
+  }
+  li:first-child {
+    border-style: none;
+  }
 }
