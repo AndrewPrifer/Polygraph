@@ -16,7 +16,7 @@ export default function analyze(title) {
   analysis.uncertainty = /might|may|maybe|probably|certanly|\?$/i.test(title);
   analysis.pointing = /this|here/i.test(title);
   analysis.listicle = /(^|the )\d+/i.test(title);
-  analysis.exaggeration = /total|fucking|garantee|literally|!$/i.test(title);
+  analysis.exaggeration = /total|fucking|garantee|literally|awesome|!$/i.test(title);
 
   return analysis;
 }
