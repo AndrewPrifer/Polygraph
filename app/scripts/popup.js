@@ -2,8 +2,6 @@ import $ from 'jquery';
 import mustache from 'mustache';
 import popup from 'raw-loader!./templates/content.hbs';
 
-$('#root').text('Loading...');
-
 chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
   chrome.tabs.sendMessage(tabs[0].id, {}, response => {
     const analysis = response.analysis;
