@@ -5,7 +5,8 @@
       <li class="expander">
         <a href="#" class="expander-trigger expander-hidden">Appeal to emotion</a>
         <div class="expander-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio mollitia fugiat facilis enim accusamus quisquam aut, repellendus incidunt quod optio facere labore illo numquam ipsum beatae vero debitis, fugit excepturi.</p>
+          <p>The article is using a language or tone that tries to appeal to your emotions. This can sacrifice racy
+            and introduce bias.</p>
         </div>
       </li>
     {{/analysis.emotion}}
@@ -13,7 +14,7 @@
       <li class="expander">
         <a href="#" class="expander-trigger expander-hidden">Personal opinion</a>
         <div class="expander-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio mollitia fugiat facilis enim accusamus quisquam aut, repellendus incidunt quod optio facere labore illo numquam ipsum beatae vero debitis, fugit excepturi.</p>
+          <p>The article displays a subjective view and is likely to be the personal opinion of the author.</p>
         </div>
       </li>
     {{/analysis.opinion}}
@@ -21,7 +22,8 @@
       <li class="expander">
         <a href="#" class="expander-trigger expander-hidden">Quotation or loose definition</a>
         <div class="expander-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio mollitia fugiat facilis enim accusamus quisquam aut, repellendus incidunt quod optio facere labore illo numquam ipsum beatae vero debitis, fugit excepturi.</p>
+           <p>Out-of-context quotations can sometimes convey a completely different meaning than what was
+             originally intended.</p>
         </div>
       </li>
     {{/analysis.quote}}
@@ -29,23 +31,27 @@
       <li class="expander">
         <a href="#" class="expander-trigger expander-hidden">Uncertainty</a>
         <div class="expander-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio mollitia fugiat facilis enim accusamus quisquam aut, repellendus incidunt quod optio facere labore illo numquam ipsum beatae vero debitis, fugit excepturi.</p>
+          <p>The author might not be certain about what he/she is writing. Communicating uncertainty in the title also allows
+            them to convey information that is false or inaccurate.
+          </p>
         </div>
       </li>
     {{/analysis.uncertainty}}
-    {{#analysis.pointing}}
+    {{#analysis.omission}}
       <li class="expander">
-        <a href="#" class="expander-trigger expander-hidden">Pointing</a>
+        <a href="#" class="expander-trigger expander-hidden">Omission</a>
         <div class="expander-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio mollitia fugiat facilis enim accusamus quisquam aut, repellendus incidunt quod optio facere labore illo numquam ipsum beatae vero debitis, fugit excepturi.</p>
+          Essential information is omitted from the title in order to entice curiosity. Clicbait.
         </div>
       </li>
-    {{/analysis.pointing}}
+    {{/analysis.omission}}
     {{#analysis.listicle}}
       <li class="expander">
         <a href="#" class="expander-trigger expander-hidden">Listicle</a>
         <div class="expander-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio mollitia fugiat facilis enim accusamus quisquam aut, repellendus incidunt quod optio facere labore illo numquam ipsum beatae vero debitis, fugit excepturi.</p>
+          <p>Listicles are almost exclusively clicbait articles. They are effective because they require
+            little commitment from the reader because of their concise nature. Readers are also more likely
+            to finish reading listicles because of the sense of progression the numbering provides.</p>
         </div>
       </li>
     {{/analysis.listicle}}
@@ -53,7 +59,7 @@
       <li class="expander">
         <a href="#" class="expander-trigger expander-hidden">Exaggeration</a>
         <div class="expander-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio mollitia fugiat facilis enim accusamus quisquam aut, repellendus incidunt quod optio facere labore illo numquam ipsum beatae vero debitis, fugit excepturi.</p>
+          <p>The article exaggerates facts for sensationalistic purposes. Clickbait.</p>
         </div>
       </li>
     {{/analysis.exaggeration}}

@@ -6,7 +6,7 @@ export default function analyze(title) {
     bias: false,
     exaggeration: false,
     uncertainty: false,
-    pointing: false,
+    omission: false,
     listicle: false,
   };
 
@@ -15,7 +15,7 @@ export default function analyze(title) {
   analysis.opinion = /should|need/i.test(title);
   analysis.quote = /"[^"]*"|'[^']*'/.test(title);
   analysis.uncertainty = /might|may|maybe|probably|certanly|\?$/i.test(title);
-  analysis.pointing = /this|these|( |^)here/i.test(title);
+  analysis.omission = /this|these|here/i.test(title);
   analysis.listicle = /(^|the )\d+/i.test(title);
   analysis.exaggeration = /total|fucking|garantee|literally|awesome|!$/i.test(title);
 
