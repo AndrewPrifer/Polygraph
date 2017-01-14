@@ -15,23 +15,66 @@
 .popup-content {
   margin-left: 20px;
   margin-right: 20px;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 10px;
   width: 200px;
+  font-family: 'Raleway', sans-serif;
 }
 
 .title {
   font-family: 'Quicksand', sans-serif;
+  font-size: 1.5em;
+  text-align: center;
 }
 
-.list {
-  font-family: 'Raleway', sans-serif;
+.all-clear {
+  text-align: center;
+}
 
-  li {
-    border-top: 1px;
-    border-style: solid;
+.expander {
+  $base-font-size: 1em;
+  $base-line-height: 1.5em;
+  $base-spacing: 1.5em;
+  $action-color: red;
+  $dark-gray: #333;
+  $light-gray: #DDD;
+  $base-font-color: $dark-gray;
+  $expander-arrow-width: 0.7em;
+  $expander-toggle-size: 1em;
+  $expander-toggle-arrow-size: $expander-toggle-size;
+  $expander-toggle-margin: 1em;
+
+  .expander-trigger {
+    border-bottom: 1px solid $light-gray;
+    color: $action-color;
+    cursor: pointer;
+    display: block;
+    font-size: $expander-toggle-size;
+    margin-bottom: $expander-toggle-size;
+    padding-bottom: $expander-toggle-size / 4;
+    text-decoration: none;
+    user-select: none;
+
+    &::before {
+      content: "\25BC";
+      font-size: $expander-arrow-width;
+      margin-right: 0.5em;
+    }
   }
-  li:first-child {
-    border-style: none;
+
+  .expander-content p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  .expander-hidden {
+    &::before {
+      content: "\25BA";
+      font-size: $expander-arrow-width;
+    }
+  }
+
+  .expander-hidden + .expander-content {
+    display: none;
   }
 }
