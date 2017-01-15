@@ -15,7 +15,7 @@ export default function analyze(title) {
   analysis.uncertainty = word(/might|may|maybe|probably|certanly/i).test(title) || /\?$/.test(title);
   analysis.omission = word(/this|these|here/i).test(title);
   analysis.listicle = word(/(^|the )\d+/i).test(title);
-  analysis.exaggeration = word(/total|fucking|garantee|literally|awesome|!$/i).test(title);
+  analysis.exaggeration = word(/total|fucking|garantee|literally|awesome/i).test(title) || /!$/.test(title);
 
   return analysis;
 }
