@@ -10,13 +10,11 @@ let analysis = null;
 if (title) {
   analysis = analyze(title);
 
-  console.log(some);
-
-  if (some(analysis)) {
-    $('body').append(mustache.render(notification, {message: '<strong>Careful!</strong> Questionable content ahead.'}));
-    $('.Polygraph_alert').fadeIn();
-    $('.Polygraph_closebtn').click(() => $('.Polygraph_alert').fadeOut());
-  }
+  // if (some(analysis)) {
+  //   $('body').append(mustache.render(notification, {message: '<strong>Careful!</strong> Questionable content ahead.'}));
+  //   $('.Polygraph_alert').fadeIn();
+  //   $('.Polygraph_closebtn').click(() => $('.Polygraph_alert').fadeOut());
+  // }
 
   // send analysis to background to set pageaction icon
   chrome.runtime.sendMessage({ analysis });
