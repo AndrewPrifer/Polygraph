@@ -34,7 +34,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 function drawIcon(badgeText, size, tab) {
   const canvas = document.createElement('canvas');
   const img = document.createElement('img');
-  const imgScale = 0.9;
+  const imgScale = 1;
   const badgeRatio = 0.7;
 
   const badgeX = size * (1 - badgeRatio);
