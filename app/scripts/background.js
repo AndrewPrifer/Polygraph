@@ -49,23 +49,18 @@ function drawIcon(badgeText, size, tab) {
       const imgOffset = (size - imgSize) / 2;
       context.drawImage(img, imgOffset, imgOffset, imgSize, imgSize);
 
-      if (badgeText != 0) {
-        context.fillStyle = "rgba(255,0,0,1)";
-        const radius = badgeSize / 2;
-        context.arc(badgeX + radius, badgeY + radius, radius, 0, 2 * Math.PI, false);
-        context.fill();
+      const clear = (badgeText == 0);
 
-        context.fillStyle = "white";
-        context.font = `${badgeSize}px Arial`;
-        context.textAlign = "center"
-        context.textBaseline = "middle";
-        context.fillText(`${badgeText}`, badgeX + radius, badgeY + radius);
-      } else {
-        context.fillStyle = "rgba(0,255,0,1)";
-        const radius = badgeSize / 2;
-        context.arc(badgeX + radius, badgeY + radius, radius, 0, 2 * Math.PI, false);
-        context.fill();
-      }
+      context.fillStyle = clear ? "rgba(0,255,0,1)" : "rgba(255,0,0,1)";
+      const radius = badgeSize / 2;
+      context.arc(badgeX + radius, badgeY + radius, radius, 0, 2 * Math.PI, false);
+      context.fill();
+
+      context.fillStyle = "white";
+      context.font = `${badgeSize}px Arial`;
+      context.textAlign = "center"
+      context.textBaseline = "middle";
+      context.fillText((clear ? '\u2713' : badgeText), badgeX + radius, badgeY + radius);
 
       resolve(context.getImageData(0, 0, size, size));
     };
