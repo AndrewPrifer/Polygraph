@@ -10,9 +10,7 @@ export default function analyze(title) {
     listicle: false,
   };
 
-  // TODO: add whitespace around all tokens
-  analysis.emotion = word(/you/i).test(title);
-  analysis.opinion = word(/should|need/i).test(title);
+  analysis.emotion = word(/you|your/i).test(title);
   analysis.quote = word(/"[^"]*"|'[^']*'/).test(title);
   analysis.uncertainty = word(/might|may|maybe|probably|certanly|\?$/i).test(title);
   analysis.omission = word(/this|these|here/i).test(title);
