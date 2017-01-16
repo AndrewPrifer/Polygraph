@@ -1,7 +1,7 @@
 <div class="popup-content">
   <h1 class="title">Polygraph</h1>
   <ul class="list">
-    {{#analysis.emotion}}
+    {{#analysis.value}}
       <li class="expander">
         <a href="#" class="expander-trigger expander-hidden">Exaggerated value</a>
         <div class="expander-content">
@@ -10,7 +10,7 @@
           </p>
         </div>
       </li>
-    {{/analysis.emotion}}
+    {{/analysis.value}}
     {{#analysis.opinion}}
       <li class="expander">
         <a href="#" class="expander-trigger expander-hidden">Personal opinion</a>
@@ -24,8 +24,7 @@
         <a href="#" class="expander-trigger expander-hidden">Quotation or loose definition</a>
         <div class="expander-content">
           <p>
-              Out-of-context quotations can sometimes convey a completely different meaning than what was
-              originally intended.
+              Out-of-context quotations can sometimes convey a completely different meaning than what was originally intended.
           </p>
         </div>
       </li>
@@ -35,8 +34,7 @@
         <a href="#" class="expander-trigger expander-hidden">Uncertainty</a>
         <div class="expander-content">
           <p>
-            The author is not be certain about what he/she is writing. Communicating uncertainty in the title
-            allows them to convey information that is false or inaccurate.
+            Communicating uncertainty in the title allows the author to convey information that is false or inaccurate without taking responsibility for it.
           </p>
         </div>
       </li>
@@ -54,8 +52,7 @@
         <a href="#" class="expander-trigger expander-hidden">Listicle</a>
         <div class="expander-content">
           <p>
-            Listicles are usually superficial articles constrained to a focus group tested number of bullet points.
-            Their popularity lies in the little effort they require from the reader and in their addictive nature.
+            Listicles are usually superficial articles constrained to a focus group tested number of bullet points. Their popularity lies in the little effort they require from the reader and in their addictive nature.
           </p>
         </div>
       </li>
@@ -64,7 +61,7 @@
       <li class="expander">
         <a href="#" class="expander-trigger expander-hidden">Exaggeration</a>
         <div class="expander-content">
-          <p>The article exaggerates facts for sensationalistic purposes.</p>
+          <p>The article uses exaggeration for sensationalistic purposes.</p>
         </div>
       </li>
     {{/analysis.exaggeration}}

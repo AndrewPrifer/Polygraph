@@ -1,6 +1,6 @@
 export default function analyze(title) {
   let analysis = {
-    emotion: false,
+    value: false,
     opinion: false,
     quote: false,
     bias: false,
@@ -10,7 +10,7 @@ export default function analyze(title) {
     listicle: false,
   };
 
-  analysis.emotion = word(/you|your/i).test(title);
+  analysis.value = word(/you|your/i).test(title);
   analysis.quote = word(/"[^"]*"|'[^']*'/).test(title);
   analysis.uncertainty = word(/might|may|maybe|probably|certanly/i).test(title) || /\?$/.test(title);
   analysis.omission = word(/this|these|here/i).test(title);
