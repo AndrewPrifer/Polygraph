@@ -1,8 +1,6 @@
 // Enable chromereload by uncommenting this line:
 import 'chromereload/devonly';
 
-import mustache from 'mustache';
-
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   const analysis = request.analysis;
   const tab = sender.tab.id;
