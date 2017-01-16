@@ -1,17 +1,17 @@
 import $ from 'jquery';
 import mustache from 'mustache';
-import popup from 'raw-loader!./templates/content.hbs';
+import popup from './templates/content.hbs';
 
 chrome.tabs.query({
   active: true,
-  currentWindow: true
-}, tabs => {
+  currentWindow: true,
+}, (tabs) => {
   const tabId = tabs[0].id;
-  chrome.tabs.sendMessage(tabId, {}, response => {
+  chrome.tabs.sendMessage(tabId, {}, (response) => {
     const analysis = response.analysis;
     let clear = true;
 
-    for (let i in analysis) {
+    for (const i in analysis) {
       if (analysis[i] === true) {
         clear = false;
         break;
@@ -25,8 +25,7 @@ chrome.tabs.query({
         clear,
       }));
       $('.expander-trigger').click(function () {
-        console.log('toggle');
-        $(this).toggleClass("expander-hidden");
+        $(this).toggleClass('expander-hidden');
       });
     }, 200);
   });

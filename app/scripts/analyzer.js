@@ -1,5 +1,5 @@
 export default function analyze(title) {
-  let analysis = {
+  const analysis = {
     value: false,
     opinion: false,
     quote: false,
