@@ -5,13 +5,7 @@ chrome.runtime.onMessage.addListener((request, sender) => {
   const analysis = request.analysis;
   const tab = sender.tab.id;
 
-  let count = 0;
-
-  for (const i in analysis) {
-    if (analysis[i] === true) {
-      count++;
-    }
-  }
+  const count = Object.values(analysis).filter(e => e).length;
 
   const icons = [16, 19, 38, 128].map(e => drawIcon(count, e));
 

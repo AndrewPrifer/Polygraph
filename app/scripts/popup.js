@@ -9,14 +9,8 @@ chrome.tabs.query({
   const tabId = tabs[0].id;
   chrome.tabs.sendMessage(tabId, {}, (response) => {
     const analysis = response.analysis;
-    let clear = true;
 
-    for (const i in analysis) {
-      if (analysis[i] === true) {
-        clear = false;
-        break;
-      }
-    }
+    const clear = Object.values(analysis).every(e => !e);
 
     // timeout to fix incorrect popup size
     setTimeout(() => {
