@@ -1,7 +1,7 @@
 {
   "name": "Polygraph",
   "private": true,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Polygraph analyzes webpages and warns you about fake news.",
   "scripts": {
     "start": "npm run dev:chrome",
